@@ -1,5 +1,5 @@
 // CONFIGURACIÓN
-const API_KEY = "AIzaSyCXGG_HbbXQbDAglYdc5evdbUv4ODp4McA"; 
+const API_KEY = "YOUR APIKEY"; 
 const MODEL_NAME = "gemini-3.1-flash-lite"; 
 const URL_API = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
 
