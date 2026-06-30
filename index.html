@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="libro.png" type="image/x-icon">
+    <script src="main.js" defer ></script>
+    <title>Escritor con Ia</title>
+</head>
+<body>
+    <section class="container">
+        <h1>Escritor con IA</h1>
+
+        <label for="idea">¡Que quieres escribir?</label>
+        <textarea id="idea">Ejemplo: Redactar un email para mis amigos</textarea>
+
+        <label for="tone">Tono del texto</label>
+        <select id="tone">
+            <option value="neutral">Neutral</option>
+            <option value="formal">Formal</option>
+            <option value="informal">Informal</option>
+        </select>
+
+        <label for="length">Longitud del texto</label>
+        <select id="length">
+            <option value="short">Corto</option>
+            <option value="medium">Medio</option>
+            <option value="long">Largo</option>
+        </select>
+
+        <button id="generate">✏️Generar texto</button>
+
+        <div id="output">Aqui saldra el texto generado con ia</div>
+
+        <button id="copy-btn" style="display: none; background-color: #10b981; margin-top: 1rem;">📋 Copiar texto</button>
+
+    </section>
+</body>
+</html>
