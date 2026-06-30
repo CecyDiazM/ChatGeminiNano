@@ -1,0 +1,153 @@
+:root {
+    --bg-gradient: radial-gradient(circle at top right, #0f172a, #020617);
+    --container-bg: rgba(30, 41, 59, 0.7);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent-blue: #3b82f6;
+    --accent-gradient: linear-gradient(135deg, #3b82f6, #2563eb);
+    --border: rgba(255, 255, 255, 0.1);
+    --input-bg: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: var(--container-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(to bottom, #fff, #94a3b8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+textarea, select {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 12px;
+    border: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#generate {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+#generate:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+#generate:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#output {
+    margin-top: 3rem;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    font-size: 1.6rem;
+    min-height: 150px;
+    white-space: pre-wrap;
+}
+
+#copy-btn {
+    background: transparent;
+    color: #fff;
+    margin-top: 1.5rem;
+    display: none;
+}
+
+#copy-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+    
+    body {
+        padding: 1rem;
+    }
+
+    textarea, select, button {
+        font-size: 1.4rem;
+        padding: 1.2rem;
+    }
+}
